@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+* {
+    font-family: 'Comfortaa', cursive;
+}
+
+body {
+    margin: 0;
+    font-size: 18px;
+    background: rgba(192, 236, 223, 0.151);
+}
+
+.container {
+    height: 100vh;
+}
+
+.container,
+.calendar-mounth,
+.calendar-days {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-container {
+    width: 35%;
+    height: 55%;
+    box-shadow: 0px 0px 7px 3px rgb(235, 192, 112);
+    overflow: hidden;
+    background: white;
+}
+
+.calendar-header {
+    height: 16%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#go-back,
+#go-today,
+#go-forward {
+    margin: 5%;
+    width: 7vw;
+    height: 5vh;
+    border: 0;
+    background: rgba(238, 227, 211, 0.8);
+    cursor: pointer;
+    border-radius: 20px;
+    transition: .3s all ease;
+}
+
+#go-back:hover,
+#go-today:hover,
+#go-forward:hover {
+    transform: scale(1.1);
+}
+
+#go-back:active,
+:hover,
+:focus,
+#go-today:active,
+:hover,
+:focus,
+#go-forward:active,
+:hover,
+:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.calendar-mounth {
+    height: 12%;
+    font-size: 1.2em;
+    background: rgb(201, 219, 201);
+}
+
+.first{
+    display: none;
+}
+
+.second{
+    display: flex;
+}
+
+.last{
+    display: none;
+}
+
+.calendar-days {
+    height: 12%;
+    background: rgb(201, 219, 201);
+}
+
+.day-title {
+    height: 100%;
+}
+
+.data-box {
+    height: 20%;
+    cursor: pointer;
+    transition: 0.4s all ease-in;
+}
+
+.data-box:hover {
+    background: rgb(201, 219, 201);
+    color: orangered;
+}
+
+.day-title,
+.data-box {
+    width: 14.28%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data-box-start1 {
+    margin-left: 71.4%;
+}
+
+.data-box-start0 {
+    margin-left: 28.56%;
+}
+
+.holiday {
+    color: rgb(241, 167, 27);
+}
+
+.calendar-main0 {
+    display: none;
+}
+
+.calendar-main2 {
+    display: none;
+}
+
+.calendar-main-this {
+    display: flex;
+}
+
+.calendar-main0,
+.calendar-main-this,
+.calendar-main2 {
+    height: 60%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.modal-icon{
+    width: 25%;
+    height: 55%;
+    position: absolute;
+    top: 22.5%;
+    left: 5%;
+    background: rgb(201, 219, 201);
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.modal-icon-header{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-icon-textarea{
+    display: block;
+    width: 100%;
+    height: 45%;
+    margin: 0;
+    margin-bottom: 3%;
+    border: 0;
+    resize: none;
+    font-size: 1em;
+}
+
+.modal-icon-input{
+    display: block;
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    margin-bottom: 2%;
+    border: 0;
+    font-size: 1em;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+
+.modal-icon-save, .modal-icon-cancel{
+    margin: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 9vw;
+    height: 5vh;
+    border: 0;
+    background: rgba(238, 227, 211, 0.8);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .3s all ease;
+}
+
+.modal-icon-save:hover, .modal-icon-cancel:hover{
+    transform: scale(1.1);
+}
+
+.modal-icon-save:active,
+:hover,
+:focus,
+.modal-icon-cancel:active,
+:hover,
+:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+
+@media (max-width: 1100px){
+    #go-back,
+    #go-today,
+    #go-forward{
+        width: 15vw;
+        height: 6vh;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        font-size: 16.6px;
+    }
+
+    .calendar-container{
+        width: 60%;
+        height: 60%;
+    }
+
+    #go-back,
+    #go-today,
+    #go-forward{
+        width: 20vw;
+    }
+
+    .modal-icon{
+        width: 35%;
+    }
+
+    .modal-icon-save, .modal-icon-cancel{
+        width: 12vw;
+        height: 6vh;
+    }
+}
+@media (max-width: 850px){
+    .modal-icon{
+        width: 45%;
+        height: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .calendar-container{
+        width: 70%;
+        height: 70%;
+    }
+
+    #go-back,
+    #go-today,
+    #go-forward{
+        width: 17vw;
+    }
+
+    .modal-icon{
+        width: 55%;
+        height: 65%;
+        top: 15%;
+    }
+
+    .modal-icon-save, .modal-icon-cancel{
+        width: 20vw;
+        height: 7vh;
+    }
+}
+
+
+@media (max-width: 524px) {
+
+    .calendar-container{
+        width: 75%;
+        height: 70%;
+    }
+
+    #go-back,
+    #go-today,
+    #go-forward{
+        width: 20vw;
+        height: 7vh;
+    }
+
+    .modal-icon{
+        width: 65%;
+    }
+
+    .modal-icon-save, .modal-icon-cancel{
+        width: 25vw;
+        height: 8vh;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .calendar-container{
+        width: 90%;
+        height: 75%;
+    }
+
+    #go-back,
+    #go-today,
+    #go-forward{
+        width: 25vw;
+        height: 7vh;
+    }
+
+    .modal-icon{
+        top: 10%;
+        width: 80%;
+        height: 80%;
+    }
+
+    .modal-icon-save, .modal-icon-cancel{
+        width: 40vw;
+        height: 8vh;
+    }
+}
+
+@media (max-height: 567px){
+    .calendar-container{
+        width: 60%;
+        height: 60%;
+    }
+
+    #go-back,
+    #go-today,
+    #go-forward{
+        height: 15vh;
+    }
+
+    .modal-icon{
+        top: 10%;
+        height: 80%;
+    }
+}
+
+@media (max-height: 450px){
+    .calendar-container{
+        width: 60%;
+        height: 75%;
+    }
+
+    #go-back,
+    #go-today,
+    #go-forward{
+        height: 10vh;
+    }
+}
+
+@media (max-height: 380px){
+    .calendar-container{
+        width: 70%;
+        height: 90%;
+    }
+
+    #go-back,
+    #go-today,
+    #go-forward{
+        height: 12vh;
+    }
+}
